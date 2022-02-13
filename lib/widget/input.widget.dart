@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
+// ignore: must_be_immutable
 class Input extends StatelessWidget {
 
   var label = "";
-  var ctrl = new MoneyMaskedTextController();
+  var ctrl = MoneyMaskedTextController();
 
-  Input({
+  Input({Key? key, 
     required this.label,
     required this.ctrl,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

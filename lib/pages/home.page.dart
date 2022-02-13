@@ -5,14 +5,17 @@ import '../widget/logo.widget.dart';
 import '../widget/submit-form.widget.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  // ignore: unused_field
   Color _color = Colors.deepPurple;
-  var _gasCtrl = new MoneyMaskedTextController();
-  var _alcCtrl = new MoneyMaskedTextController();
+  var _gasCtrl = MoneyMaskedTextController();
+  var _alcCtrl = MoneyMaskedTextController();
   var _busy = false;
   var _completed = false;
   var _resultText = "Compensa utilizar álcool";
@@ -27,7 +30,7 @@ class _HomePageState extends State<HomePage> {
         ),
         child: ListView(
           children: <Widget>[
-            Logo(),
+            const Logo(),
             _completed
                 ? Success(
                     result: _resultText,

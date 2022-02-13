@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class LoadingButton extends StatelessWidget {
   
   var busy = false;
@@ -7,12 +8,12 @@ class LoadingButton extends StatelessWidget {
   Function func;
   var text = "";
 
-  LoadingButton({
+  LoadingButton({Key? key, 
     required this.busy,
     required this.invert,
     required this.func,
     required this.text,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

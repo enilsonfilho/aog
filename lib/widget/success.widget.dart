@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'loading-button.widget.dart';
 
+// ignore: must_be_immutable
 class Success extends StatelessWidget {
   var result = "";
   Function reset;
 
-  Success({
+  Success({Key? key, 
     required this.result,
     required this.reset,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

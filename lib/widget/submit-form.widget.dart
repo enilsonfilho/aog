@@ -3,18 +3,19 @@ import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'input.widget.dart';
 import 'loading-button.widget.dart';
 
+// ignore: must_be_immutable
 class SubmitForm extends StatelessWidget {
-  var gasCtrl = new MoneyMaskedTextController();
-  var alcCtrl = new MoneyMaskedTextController();
+  var gasCtrl = MoneyMaskedTextController();
+  var alcCtrl = MoneyMaskedTextController();
   var busy = false;
   Function submitFunc;
 
-  SubmitForm({
+  SubmitForm({Key? key, 
     required this.gasCtrl,
     required this.alcCtrl,
     required this.busy,
     required this.submitFunc,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
