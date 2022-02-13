@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
-
 import 'input.widget.dart';
 import 'loading-button.widget.dart';
 
