@@ -35,12 +35,33 @@ class HomePage extends StatelessWidget {
         children: <Widget>[
           Logo(),
           Input(
-            label: "Gasolina", 
+            label: "Gasolina",
             ctrl: _gastCtrl,
           ),
           Input(
-            label: "Álcool", 
+            label: "Álcool",
             ctrl: _alcCtrl,
+          ),
+          Container(
+            margin: EdgeInsets.all(30),
+            height: 60,
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.8),
+              borderRadius: BorderRadius.circular(
+                50,
+              ),
+            ),
+            child: TextButton(
+              child: Text(
+                "CALCULAR",
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 25,
+                  fontFamily: "Big Shoulders Display",
+                ),
+              ),
+              onPressed: () {},
+            ),
           ),
         ],
       ),
