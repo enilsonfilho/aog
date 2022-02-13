@@ -26,6 +26,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
+      body: ListView(
+        children: <Widget>[
+          Image.asset(
+            "assets/images/aog-white.png",
+            height: 80,
+          ),
+        ],
+      ),
     );
   }
 }
