@@ -1,5 +1,7 @@
+import 'package:aog/widget/input.widget.dart';
 import 'package:aog/widget/logo.widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_masked_text/flutter_masked_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,13 +18,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  var _gastCtrl = new MoneyMaskedTextController();
+  var _alcCtrl = new MoneyMaskedTextController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +34,13 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Logo(),
-          TextFormField(
-            keyboardType: TextInputType.number,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 45,
-              fontFamily: "Big Shoulders Display",
-            ),
+          Input(
+            label: "Gasolina", 
+            ctrl: _gastCtrl,
+          ),
+          Input(
+            label: "Álcool", 
+            ctrl: _alcCtrl,
           ),
         ],
       ),
