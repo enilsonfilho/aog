@@ -1,3 +1,4 @@
+import 'package:aog/widget/logo.widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,12 +16,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,25 +30,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Theme.of(context).primaryColor,
       body: ListView(
         children: <Widget>[
-          const SizedBox(
-            height: 60,
-          ),
-          Image.asset(
-            "assets/images/aog-white.png",
-            height: 80,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text(
-            "Álcool ou Gasolina",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontFamily: "Big Shoulders Display",
-            ),
-            textAlign: TextAlign.center,
-          )
+          Logo(),
         ],
       ),
     );
