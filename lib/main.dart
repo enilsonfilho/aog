@@ -31,6 +31,14 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Logo(),
+          TextFormField(
+            keyboardType: TextInputType.number,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 45,
+              fontFamily: "Big Shoulders Display",
+            ),
+          ),
         ],
       ),
     );
